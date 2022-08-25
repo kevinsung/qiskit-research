@@ -356,8 +356,6 @@ def expectation_from_correlation_matrix(
     else:  # isinstance(operator, FermionicOp)
         # expectation
         exp_val = 0.0
-        # HACK FermionicOp should support iteration with public API
-        # See https://github.com/Qiskit/qiskit-nature/issues/541
         for term, coeff in operator.terms():
             if not term:
                 exp_val += coeff
@@ -373,8 +371,6 @@ def expectation_from_correlation_matrix(
         # variance
         var = 0 + 0j
         if cov is not None:
-            # HACK FermionicOp should support iteration with public API
-            # See https://github.com/Qiskit/qiskit-nature/issues/541
             for term_ij, coeff_ij in operator.terms():
                 if not term_ij:
                     continue
