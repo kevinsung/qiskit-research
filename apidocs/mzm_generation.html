@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Majorana zero modes experiment &#8212; Qiskit Research 0.0.2 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -55,14 +55,14 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>qubits</strong> – list of physical qubits for the experiment.</p></li>
+<li><p><strong>physical_qubits</strong> – list of physical qubits for the experiment.</p></li>
 <li><p><strong>analysis</strong> – Optional, the analysis to use for the experiment.</p></li>
 <li><p><strong>backend</strong> – Optional, the backend to run the experiment on.</p></li>
 <li><p><strong>experiment_type</strong> – Optional, the experiment type string.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>QiskitError</strong> – if qubits contains duplicates.</p>
+<dd class="field-even"><p><strong>QiskitError</strong> – If qubits contains duplicates.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -81,7 +81,7 @@
 <p class="admonition-title">Note</p>
 <p>These circuits should be on qubits <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">..,</span> <span class="pre">N-1]</span></code> for an
 <em>N</em>-qubit experiment. The circuits mapped to physical qubits
-are obtained via the <code class="xref py py-meth docutils literal notranslate"><span class="pre">transpiled_circuits()</span></code> method.</p>
+are obtained via the internal <code class="xref py py-meth docutils literal notranslate"><span class="pre">_transpiled_circuits()</span></code> method.</p>
 </div>
 </dd></dl>
 
@@ -231,7 +231,7 @@ are obtained via the <code class="xref py py-meth docutils literal notranslate">
       &copy;2022.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
       |
